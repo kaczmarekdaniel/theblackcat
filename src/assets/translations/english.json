@@ -1,0 +1,22 @@
+{
+  "welcome": "Welcome to our application!",
+  "changeLang": "Change language",
+  "about": {
+    "heading": "About us",
+    "paragraph": "Soulja Boy off in it, oh Watch me crank it, watch me roll Watch me crank that Soulja Boy Then Superman that, oh Now watch me yuu (Crank that Soulja Boy) Now watch me yuu (Crank that Soulja Boy) Now watch me yuu (Crank that Soulja Boy) Now watch me yuu (Crank that Soulja Boy) Now watch Soulja Boy off in it, oh Watch me crank it, watch me roll Watch me crank that Soulja Boy"
+  },
+  "landing": {
+    "card1": {
+      "heading": "Menu",
+      "paragraph": "Menu paragraph"
+    },
+    "card2": {
+      "heading": "About",
+      "paragraph": "About us paragraph"
+    },
+    "card3": {
+      "heading": "News",
+      "paragraph": "Reservations paragraph"
+    }
+  }
+}
