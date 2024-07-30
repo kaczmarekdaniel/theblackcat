@@ -6,17 +6,15 @@ import NewsCTA from "./components/NewsCTA";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
-type News = {
+export type News = {
 	sys: {
 		id: string;
 	};
 	fields: {
 		title: string;
 		image: {
-			fields: {
-				file: {
-					url: string;
-				};
+			sys: {
+				id: string;
 			};
 		};
 		shortDescription: string;
@@ -37,6 +35,12 @@ const LandingPage = () => {
 		fetch(url)
 			.then((response) => response.json())
 			.then((data) => {
+				data.items.forEach((entry: News) => {
+					const item = data.includes.Asset.find(
+						(item: News) => item.sys.id === entry.fields.image.sys.id,
+					);
+					entry.fields.image = item.fields.file.url;
+				});
 				setData(data.items);
 				console.log(data);
 			})
@@ -58,7 +62,7 @@ const LandingPage = () => {
 				<h2 className="text-white text-4xl font-regular font-sans">
 					Aktualności
 				</h2>
-				<ul className="grid grid-cols-3 gap-10 w-full h-72 ">
+				<ul className="grid grid-cols-1 md:grid-cols-3 gap-10 w-full h-auto xl:h-72 ">
 					{data.map((item) => (
 						<NewsCTA key={item.sys.id} data={item.fields} />
 					))}

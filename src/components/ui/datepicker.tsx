@@ -11,30 +11,30 @@ import {
 	PopoverTrigger,
 } from "@/components/ui/popover";
 
-export function DatePicker() {
-	const [date, setDate] = React.useState<Date>();
+type DatePickerProps = {
+	value: Date;
+	onChange: (date: Date) => void;
+};
+ 
+export const DatePicker: React.FC<DatePickerProps> = ({ value, onChange }) => {
+	const [date, setDate] = React.useState(value);
 
 	React.useEffect(() => {
-		const dateConverted = new Date(date);
+		setDate(value);
+	}, [value]);
 
-		// Options for the locale string
+	const handleDateChange = (newDate: Date) => {
+		setDate(newDate);
+		onChange(newDate);
+	};
 
-		// Convert to Polish format
-		const formattedDate = dateConverted.toLocaleDateString("pl-PL", {
-			day: "2-digit",
-			month: "long",
-			year: "numeric",
-		});
-
-        console.log(formattedDate);
-	}, [date]);
 	return (
 		<Popover>
 			<PopoverTrigger asChild>
 				<Button
 					variant={"outline"}
 					className={cn(
-						"w-[280px] justify-start text-left font-normal hover:bg-transparent font-text",
+						"w-full max-w-full justify-start text-left font-normal hover:bg-transparent font-text",
 						!date && "text-muted-foreground"
 					)}
 				>
@@ -46,11 +46,12 @@ export function DatePicker() {
 				<Calendar
 					mode="single"
 					selected={date}
-					onSelect={setDate}
+					//@ts-expect-error test
+					onSelect={handleDateChange}
 					initialFocus
 					className=" text-white font-text  italic"
 				/>
 			</PopoverContent>
 		</Popover>
 	);
-}
+};

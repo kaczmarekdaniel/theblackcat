@@ -35,9 +35,8 @@ const News = () => {
 				console.log(data);
 
 				data.items.forEach((entry: News) => {
-					console.log(entry.fields.image.sys.id);
 					const item = data.includes.Asset.find(
-						(item) => item.sys.id === entry.fields.image.sys.id
+						(item: News) => item.sys.id === entry.fields.image.sys.id
 					);
 					entry.fields.image = item.fields.file.url;
 				});

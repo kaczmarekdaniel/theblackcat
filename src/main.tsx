@@ -9,7 +9,7 @@ import i18n from "../i18n.ts";
 ReactDOM.createRoot(document.getElementById("root")!).render(
 	<React.StrictMode>
 		<I18nextProvider i18n={i18n}>
-			<Router>
+			<Router basename="/">
 				<App />
 			</Router>
 		</I18nextProvider>

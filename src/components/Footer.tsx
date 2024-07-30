@@ -2,7 +2,7 @@ import footerContent from "@/data/footer";
 
 const Footer = () => {
 	return (
-		<footer className="py-20 grid grid-cols-1 gap-20  px-6">
+		<footer className="py-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20  px-6">
 			{footerContent.map((section, index) => (
 				<div key={index} className="italic col-span-1">
 					<h2 className="text-lg mb-4">{section.title}</h2>
