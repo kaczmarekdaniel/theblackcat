@@ -1,11 +1,33 @@
 {
   "welcome": "Witaj!",
-  "changeLang": "zmien jezyk",
+  "changeLang": "Zmień język",
   "about": {
-    "heading": "O nas",
-    "paragraph": "Ciemno już zgasły wszystkie światła Ciemno już noc nadchodzi głucha Ciemno już zgasły wszystkie światła Ciemno już noc nadchodzi głucha Słuchaj to sprawdź to to Peja z Top Medi Top Medi Mientha krew za krew połączenie stref Nocna rozpierducha to nie blef I dalej krok za krokiem w złodziei mieście Czasami jest taka nuda że dłubie się w nim Jak pieprzone rodzynki w domowym cieście Nadchodzą nocne mary więc zróbcie przejście W sumie olej zadymę dziś tylko drag i rap mnie interesuje"
+    "aboutHeading": "O NAS",
+    "aboutParagraph": "Ciemno już zgasły wszystkie światła Ciemno już noc nadchodzi głucha Ciemno już zgasły wszystkie światła Ciemno już noc nadchodzi głucha Słuchaj to sprawdź to to Peja z Top Medi Top Medi Mientha krew za krew połączenie stref Nocna rozpierducha to nie blef I dalej krok za krokiem w złodziei mieście Czasami jest taka nuda że dłubie się w nim Jak pieprzone rodzynki w domowym cieście Nadchodzą nocne mary więc zróbcie przejście W sumie olej zadymę dziś tylko drag i rap mnie interesuje"
   },
   "landing": {
+    "menuCard": {
+      "menuHeading": "MENU",
+      "menuParagraph": "Koktajle, inspiracje, doznania, zaskoczenia:\\n serwowane w dowolnej kolejności."
+  },
+    "reservationCard": {
+      "reservationHeading": "REZERWACJE",
+      "reservationParagraph": "Najprostsza metoda upewnienia się,\\nże dla Ciebie miejsca nie zabraknie."
+    },
+     "newsCard": {
+      "newsHeading": "AKTUALNOŚCI",
+      "newsParagraph": "Ogłoszenia nowych wydarzeń,\\n podsumowania tych już zakończonych."
+    },
+  "findUsSection": {
+    "findUsHeading": "ZNAJDŹ NAS",
+    "newsParagraph": "Langiewicza 18 \\n(wejście od Królowej Jadwigi)\\nSzczecin, 70-263"
+  },
   
-  }
+  "openingHoursSection": {
+    "openingHoursHeading": "GODZINY OTWARCIA",
+    "openingHoursParagraph1": "Piątek - Sobota\\n18:00 - 2:00",
+    "openingHoursParagraph2": "Niedziela - Poniedziałek / Środa - Czwartek\\n18:00 pm - 1:00 am",
+    "openingHoursParagraph3": "Wtorek\\nZamknięte",
+  },
+}
 }
